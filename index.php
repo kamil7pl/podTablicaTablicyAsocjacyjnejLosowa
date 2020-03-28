@@ -1,18 +1,31 @@
 <?php
-$tab["kluczJeden"]="jeden";
-$tab["kluczDwa"]="dwa";
-$tab["kluczTrzy"]="trzy";
-$tab["kluczCztery"]="cztery";
-$tab["kluczPiec"]="piec";
-$tabKluczy=array_rand($tab, 2);//chyba od lewej do prawej
-shuffle($tabKluczy);
-foreach($tabKluczy as $wartosc){
-	$podTablicaTablicy_tab[$wartosc]=$tab[$wartosc];
+class podtablicaTabAsocjacyjnej{
+	public function podtablica($tablica=array(), $dlugoscPodTablicy){
+		try{
+			if($dlugoscPodTablicy<=count($tablica)){
+			$tabKluczy=array_rand($tablica, $dlugoscPodTablicy);
+			shuffle($tabKluczy);
+			$podTablicaTablicyTablica=array();
+			foreach($tabKluczy as $wartosc){
+			$podTablicaTablicyTablica[$wartosc]=$tablica[$wartosc];
+			}
+			return $podTablicaTablicyTablica;
+			}
+			else throw new Exception("Błąd");
+		}
+		catch(Exception $x){
+			echo $x->getMessage();
+		}
+	}
 }
-print_r($podTablicaTablicy_tab);
-//print_r($tabKluczy);
-//https://www.php.net/manual/en/function.array-rand.php
-//shuffle - Przetasuj tablicę
-//https://www.php.net/manual/en/function.shuffle.php
-
+/*
+$podtablicaTabAsocjacyjnej=new podtablicaTabAsocjacyjnej();
+$arr["red"]="czerwony";
+$arr["green"]="zielony";
+$arr["yellow"]="żółty";
+$arr["car"]="samochód";
+$arr["apple"]="jabłko";
+$x=$podtablicaTabAsocjacyjnej->podtablica($arr, 3);
+print_r($x);
+*/
 ?>

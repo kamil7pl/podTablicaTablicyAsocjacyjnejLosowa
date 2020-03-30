@@ -18,14 +18,30 @@ class podtablicaTabAsocjacyjnej{
 		}
 	}
 }
-/*
+
 $podtablicaTabAsocjacyjnej=new podtablicaTabAsocjacyjnej();
-$arr["red"]="czerwony";
-$arr["green"]="zielony";
-$arr["yellow"]="żółty";
 $arr["car"]="samochód";
 $arr["apple"]="jabłko";
+$arr["pencil"]="ołówek";
+$arr["respositorie"]="magazyn";
+$arr["guide"]="przewodnik";
+$arr["development"]="rozwój";
+$arr["team"]="zespół";
+$arr["security"]="bezpieczeństwo";
+$arr["white"]="biały";
+$arr["red"]="czerwony";
+$arr["orange"]="pomarańczowy";
+$arr["green"]="zielony";
+$arr["announces"]="ogłosić";
+$arr["book"]="książka";
+$arr["immediate"]="natychmiastowy";
+$arr["release"]="wydanie";
+$arr["several"]="kilka";
+$arr["fixes"]="poprawki";
+$arr["encouraged"]="zachęcany";
+$arr["upgrade"]="aktualizacja";
+
 $x=$podtablicaTabAsocjacyjnej->podtablica($arr, 3);
 print_r($x);
-*/
+
 ?>
